@@ -1,0 +1,14 @@
+header div img {
+  position: relative;
+}
+header h2 {
+  margin-top: -0.5em;
+}
+
+header {
+  height: 400px;
+  width: 100%;
+  background-color: #ffa07a;
+  background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.png");
+  text-align: center;
+}

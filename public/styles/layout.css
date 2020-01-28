@@ -15,9 +15,20 @@ html {
  */
 
 body {
+  padding-top: 120px;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+main.container {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  background-color: #f4f1ec;
+
 }
 
 /*

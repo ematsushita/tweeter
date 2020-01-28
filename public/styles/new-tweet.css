@@ -1,0 +1,23 @@
+form input {
+  background-color:#4056A1;
+  color: #FFF;
+  font-family: "bungee";
+  float: left;
+}
+
+.counter {
+  float: right;
+  font-family: "bungee";
+}
+
+form textarea {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  width: 100%;
+  border-bottom: 3px solid black;
+  font-weight: 600;
+  height: 1.75em;
+}
+
+
