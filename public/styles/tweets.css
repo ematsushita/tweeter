@@ -5,16 +5,27 @@ article {
 }
 
 header .name {
-  text-align: left;
-  padding-left: 1em;
+  float: left;
+  padding-left: 0.5em;
   font-weight: 300;
-  position: absolute;
 }
 
 header .name img {
-  width: 15%;
-  height: 15%;
+  width: 1.5em;
+  height: 1.5em;
   float: left;
+}
+
+header .hidden {
+  visibility: hidden;
+}
+
+.tweet:hover .hidden {
+  visibility: visible;
+}
+
+.tweet:hover {
+  box-shadow: 10px 10px 10px lightgray
 }
 
 header .username {
@@ -36,16 +47,15 @@ article p.tweet-text{
 
 
 footer .time-stamp {
-  text-align: left;
+  float: left;
   font-size: 12px;
   padding-left: 1em;
   font-weight: 300;
-  position: absolute;
 }
 
 footer .social-icons img {
   padding: 2px;
   float: right;
-  width: 20px;
-  height: 20px;
+  width: 1em;
+  height: 1em;
 }
