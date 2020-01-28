@@ -15,9 +15,10 @@ form textarea {
   outline: 0;
   background: transparent;
   width: 100%;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #545149;
   font-weight: 600;
   height: 1.75em;
+  color: #545149;
 }
 
 

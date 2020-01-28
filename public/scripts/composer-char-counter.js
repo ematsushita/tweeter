@@ -8,7 +8,5 @@ $(document).ready(function() {
       $("form").find(".counter").css("color", "red");
     }
   })
-
-
 });
 

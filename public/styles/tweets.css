@@ -1,0 +1,51 @@
+article {
+  margin-top: 3em;
+  padding: 1em;
+  border: 2px solid #545149;
+}
+
+header .name {
+  text-align: left;
+  padding-left: 1em;
+  font-weight: 300;
+  position: absolute;
+}
+
+header .name img {
+  width: 15%;
+  height: 15%;
+  float: left;
+}
+
+header .username {
+  float: right;
+  padding-right: 1em;
+  font-weight: 400;
+  color: lightgray;
+}
+
+
+article p.tweet-text{
+  text-align: left;
+  border-bottom: 3px solid #545149;
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 3em;
+  height: 2em;
+}
+
+
+footer .time-stamp {
+  text-align: left;
+  font-size: 12px;
+  padding-left: 1em;
+  font-weight: 300;
+  position: absolute;
+}
+
+footer .social-icons img {
+  padding: 2px;
+  float: right;
+  width: 20px;
+  height: 20px;
+}
