@@ -54,9 +54,8 @@ footer .time-stamp {
   font-weight: 300;
 }
 
-footer .social-icons img {
-  padding: 2px;
+.social-icons i {
   float: right;
-  width: 1em;
-  height: 1em;
+  margin: 0.2em;
+  font-size: 12px;
 }

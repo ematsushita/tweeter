@@ -38,9 +38,9 @@ $(document).ready(function() {
 
     const socialIcons =
     `<div class="social-icons">
-    <img src="/images/ig.png">
-    <img src="/images/facebook.png">
-    <img src="/images/twitter2.png">
+    <i class="fas fa-heart"></i>
+    <i class="fas fa-flag"></i>
+    <i class="fas fa-retweet"></i>
     </div>`;
 
     const $header = $("<header>")
@@ -53,7 +53,6 @@ $(document).ready(function() {
     const $article = $("<article>")
     .addClass("tweet")
     .append($header, $tweet, $footer);
-
 
     return $article;
   };
