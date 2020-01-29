@@ -32,6 +32,10 @@ $(document).ready(function() {
   $("#composeTweet").submit(function(event) {
     event.preventDefault();
     const serialData = $(this).serialize();
+    const tweetLength = $("textarea").val().length;
+    if (tweetLength > 140 || tweetLength <= 0) {
+      alert("Tweets must be between 1 and 140 characters")
+    }
     $.post("/tweets", serialData, () => {
       console.log("success");
     })
