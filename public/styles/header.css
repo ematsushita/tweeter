@@ -1,7 +1,7 @@
-header div img {
+header .profile-pic {
   position: relative;
 }
-header h2 {
+header .your-name {
   margin-top: -0.5em;
 }
 
