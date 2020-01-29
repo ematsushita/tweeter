@@ -51,7 +51,7 @@ $(document).ready(function() {
       return alert("Tweets must be between 1 and 140 characters")
     }
     $.post("/tweets", serialData, () => {
-      console.log("success");
+      $(".tweets-container").prepend(loadTweets());
     })
   });
 
