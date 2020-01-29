@@ -1,4 +1,18 @@
 $(document).ready(function() {
+
+  const standardTime = function(time) {
+    const today = Date.now();
+    const dayCreated = time;
+    const daysAgo = Math.floor(((today - dayCreated) / (1000 * 60 * 60)) / 24);
+    
+    if (daysAgo === 0) {
+      return "today";
+    } else if (daysAgo === 1) {
+      return "yesterday"
+    } else {
+      return daysAgo + " days ago";
+    }
+  };
   
   const createTweetElement = function (data) {
     return `
@@ -8,15 +22,15 @@ $(document).ready(function() {
           </header>
             <p class="tweet-text">${data.content.text}</p>
           <footer>
-            <div class="time-stamp">${data.created_at}</div><div class="social-icons"><img src="/images/ig.png"><img src="/images/facebook.png"><img src="/images/twitter2.png"></div>
+            <div class="time-stamp">${standardTime(data.created_at)}</div><div class="social-icons"><img src="/images/ig.png"><img src="/images/facebook.png"><img src="/images/twitter2.png"></div>
           </footer>
           
         </article>`
-  }
+  };
 
   const renderTweets = function(data) {
     for (const tweet of data) {
-      let $newTweet = createTweetElement(tweet);
+      const $newTweet = createTweetElement(tweet);
       $("#tweets-container").prepend($newTweet);
     }
   }
@@ -25,7 +39,7 @@ $(document).ready(function() {
     $.get("/tweets", (data) => {
       renderTweets(data);
     })
-  }
+  };
 
   loadTweets();
 
@@ -34,12 +48,12 @@ $(document).ready(function() {
     const serialData = $(this).serialize();
     const tweetLength = $("textarea").val().length;
     if (tweetLength > 140 || tweetLength <= 0) {
-      alert("Tweets must be between 1 and 140 characters")
+      return alert("Tweets must be between 1 and 140 characters")
     }
     $.post("/tweets", serialData, () => {
       console.log("success");
     })
-  })
+  });
 
 });
 

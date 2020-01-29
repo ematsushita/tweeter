@@ -8,7 +8,7 @@ header .your-name {
 header.main-header {
   height: 400px;
   width: 100%;
-  background-color: #ffa07a;
-  background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.png");
+  background-color: #d3d3d3;
+  background-image: url("https://www.transparenttextures.com/patterns/transparent-square-tiles.png");
   text-align: center;
 }

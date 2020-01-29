@@ -25,14 +25,14 @@ header .hidden {
 }
 
 .tweet:hover {
-  box-shadow: 10px 10px 10px lightgray
+  box-shadow: 10px 10px 10px grey
 }
 
 header .username {
   float: right;
   padding-right: 1em;
   font-weight: 400;
-  color: lightgray;
+  color: grey;
 }
 
 
@@ -43,6 +43,7 @@ article p.tweet-text{
   margin-left: 2%;
   margin-top: 3em;
   height: 2em;
+  overflow: auto;
 }
 
 
