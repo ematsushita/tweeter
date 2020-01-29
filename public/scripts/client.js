@@ -6,26 +6,56 @@ $(document).ready(function() {
     const daysAgo = Math.floor(((today - dayCreated) / (1000 * 60 * 60)) / 24);
     
     if (daysAgo === 0) {
-      return "today";
+      return "posted today";
     } else if (daysAgo === 1) {
-      return "yesterday"
+      return "posted yesterday"
     } else {
-      return daysAgo + " days ago";
+      return `posted ${daysAgo} days ago`;
     }
   };
   
   const createTweetElement = function (data) {
-    return `
-    <article class="tweet">
-          <header> 
-            <div class="name"><img src=${data.user.avatars}> ${data.user.name}</div><div class="username hidden">${data.user.handle}</div>
-          </header>
-            <p class="tweet-text">${data.content.text}</p>
-          <footer>
-            <div class="time-stamp">${standardTime(data.created_at)}</div><div class="social-icons"><img src="/images/ig.png"><img src="/images/facebook.png"><img src="/images/twitter2.png"></div>
-          </footer>
-          
-        </article>`
+    
+    const $avatar = $("<img>")
+    .attr("src", data.user.avatars)
+    
+    const $name = $("<div>")
+    .text(data.user.name)
+    .addClass("name")
+    .append($avatar);
+
+    const $username = $("<div>")
+    .text(data.user.handle)
+    .addClass("username hidden");
+
+    const $tweet = $("<p>")
+    .text(data.content.text)
+    .addClass("tweet-text");
+
+    const $timeStamp = $("<div>")
+    .text(standardTime(data.created_at))
+    .addClass("time-stamp");
+
+    const socialIcons =
+    `<div class="social-icons">
+    <img src="/images/ig.png">
+    <img src="/images/facebook.png">
+    <img src="/images/twitter2.png">
+    </div>`;
+
+    const $header = $("<header>")
+    .append($name)
+    .append($username);
+
+    const $footer = $("<footer>")
+    .append(socialIcons, $timeStamp);
+
+    const $article = $("<article>")
+    .addClass("tweet")
+    .append($header, $tweet, $footer);
+
+
+    return $article;
   };
 
   const renderTweets = function(data) {
@@ -36,6 +66,7 @@ $(document).ready(function() {
   }
 
   const loadTweets = function() {
+    $("#tweets-container").empty();
     $.get("/tweets", (data) => {
       renderTweets(data);
     })
@@ -51,7 +82,8 @@ $(document).ready(function() {
       return alert("Tweets must be between 1 and 140 characters")
     }
     $.post("/tweets", serialData, () => {
-      $(".tweets-container").prepend(loadTweets());
+      $("#tweets-container").prepend(loadTweets());
+      $("#composeTweet")[0].reset();
     })
   });
 
