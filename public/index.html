@@ -29,7 +29,12 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <div class="form-toggle"><strong>Write</strong> a new tweet
+        <button id="arrow-down">
+          <i class="fas fa-angle-double-down"></i>
+        </button>
+      </div>
+      <div class="logo">tweeter</div>
     </nav>
   
     <header class="main-header">
@@ -52,6 +57,10 @@
           <span class="counter">140</span>
         </form>
       </section>
+      
+      <button id="arrow-up">
+        <i class="fas fa-angle-double-up"></i>
+      </button>
       
       <section id="tweets-container">
       </section>
