@@ -60,3 +60,27 @@ footer .time-stamp {
   justify-content: space-between;
   margin: 0;
 }
+
+@media only screen and (max-width: 414px) {
+  article.tweet {
+    margin-top: 2em;
+    padding: 0.7em;
+  }
+  article p.tweet-text{
+    margin-top: 1em;
+    overflow: auto;
+    font-size: 0.8em;
+  }
+
+  header .username {
+    padding-right: 0.5em;
+    font-weight: 300;
+    font-size: 0.6em;
+  }
+
+  header .name {
+    padding-left: 0.5em;
+    font-weight: 300;
+    font-size: 0.6em;
+  }
+}

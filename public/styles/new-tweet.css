@@ -26,6 +26,12 @@ form textarea {
   color: #545149;
 }
 
+#new-tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
 .new-tweet #error-messages {
   border: 2px solid red;
   color: red;

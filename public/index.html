@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
@@ -30,11 +31,10 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <div class="logo">tweeter</div>
-      <div class="form-toggle"><strong>Write</strong> a new tweet
-        <button id="arrow-down">
-          <i class="fas fa-angle-double-down"></i>
-        </button>
-      </div>
+        <div class="column-flex">
+          <div id="write-a-tweet"><strong>Write</strong> a new tweet</div>
+          <button id="arrow-down"><i class="fas fa-angle-double-down"></i></button>
+        </div>
     </nav>
   
     <header class="main-header">
@@ -55,10 +55,12 @@
           <i class="fas fa-exclamation-triangle"></i>Tweets must be between 1 and 140 characters<i class="fas fa-exclamation-triangle"></i>
         </div>
 
-        <form action="/tweets/" id="composeTweet">
+        <form action="/tweets/" id="compose-tweet">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
-          <span class="counter">140</span>
+          <div id=#new-tweet-footer>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </div>
         </form>
       </section>
       

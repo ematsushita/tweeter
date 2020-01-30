@@ -83,7 +83,7 @@ $(document).ready(function() {
 
   loadTweets();
 
-  $("#composeTweet").submit(function(event) {
+  $("#compose-tweet").submit(function(event) {
     event.preventDefault();
     const serialData = $(this).serialize();
     const tweetLength = $("textarea").val().length;
@@ -96,7 +96,7 @@ $(document).ready(function() {
     }
     $.post("/tweets", serialData, () => {
       $("#tweets-container").prepend(loadTweets());
-      $("#composeTweet")[0].reset();
+      $("#compose-tweet")[0].reset();
       $(".counter").text(140);
     })
   });
@@ -121,10 +121,12 @@ $(document).ready(function() {
 
   $(window).scroll(function(){
     if($(document).scrollTop() > 520){
-      $(".form-toggle").css({"display": "none"});
+      $("#write-a-tweet").css({"display": "none"});
+      $("#arrow-down").css({"display": "none"});
       $("#arrow-up").css({"display": "block"});
     } else {
-      $(".form-toggle").css({'display': 'block'});
+      $("#write-a-tweet").css({'display': 'block'});
+      $("#arrow-down").css({'display': 'block'});
       $("#arrow-up").css({"display": "none"});
     }
   });

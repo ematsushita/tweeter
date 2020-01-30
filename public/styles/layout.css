@@ -30,6 +30,15 @@ main.container {
   background-color: #f4f1ec;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+@media only screen and (min-width: 1024px) {
+  main.container {
+    float: right;
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body {
+    padding: 0;
+  }
+}

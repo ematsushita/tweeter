@@ -12,3 +12,12 @@ header.main-header {
   background-image: url("https://www.transparenttextures.com/patterns/transparent-square-tiles.png");
   text-align: center;
 }
+
+@media only screen and (min-width: 1024px) {
+  header.main-header {
+    float: left;
+    width: 30%;
+    margin-top: 4rem;
+    margin-left: 5rem;
+  }
+}
