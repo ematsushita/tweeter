@@ -84,7 +84,11 @@ $(document).ready(function() {
     const serialData = $(this).serialize();
     const tweetLength = $("textarea").val().length;
     if (tweetLength > 140 || tweetLength <= 0) {
-      return alert("Tweets must be between 1 and 140 characters")
+      return $("#error-messages").slideDown(300);
+    } else {
+      $("#error-messages").slideUp(300, function() {
+        $("textarea").focus();
+      })
     }
     $.post("/tweets", serialData, () => {
       $("#tweets-container").prepend(loadTweets());

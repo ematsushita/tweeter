@@ -50,6 +50,11 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+
+        <div id="error-messages">
+          <i class="fas fa-exclamation-triangle"></i>Tweets must be between 1 and 140 characters<i class="fas fa-exclamation-triangle"></i>
+        </div>
+
         <h2>Compose Tweet</h2>
         <form action="/tweets/" id="composeTweet">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
@@ -61,7 +66,7 @@
       <button id="arrow-up">
         <i class="fas fa-angle-double-up"></i>
       </button>
-      
+
       <section id="tweets-container">
       </section>
     </main>
