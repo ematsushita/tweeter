@@ -5,7 +5,6 @@ article.tweet {
 }
 
 header .name {
-  float: left;
   padding-left: 0.5em;
   font-weight: 300;
 }
@@ -29,7 +28,6 @@ header .hidden {
 }
 
 header .username {
-  float: right;
   padding-right: 1em;
   font-weight: 400;
   color: grey;
@@ -46,16 +44,19 @@ article p.tweet-text{
   overflow: auto;
 }
 
-
 footer .time-stamp {
-  float: left;
   font-size: 12px;
   padding-left: 1em;
   font-weight: 300;
 }
 
 .social-icons i {
-  float: right;
   margin: 0.2em;
   font-size: 12px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
 }

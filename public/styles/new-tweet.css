@@ -1,5 +1,6 @@
 main .new-tweet {
   display: none;
+  margin-top: 2.5rem;
 }
 
 form input {

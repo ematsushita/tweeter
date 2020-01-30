@@ -28,6 +28,10 @@ $(document).ready(function() {
     .text(handle)
     .addClass("username hidden");
 
+    const $userFlex = $("<div>")
+    .addClass("flex")
+    .append($name, $username);
+
     const $tweet = $("<p>")
     .text(content.text)
     .addClass("tweet-text");
@@ -50,11 +54,11 @@ $(document).ready(function() {
     .append($socialHeart, $socialFlag, $socialTweet);
 
     const $header = $("<header>")
-    .append($name)
-    .append($username);
+    .append($userFlex);
 
     const $footer = $("<footer>")
-    .append($socialIcons, $timeStamp);
+    .addClass("flex")
+    .append($timeStamp, $socialIcons);
 
     const $article = $("<article>")
     .addClass("tweet")
