@@ -4,6 +4,10 @@ Tweeter is a simple, single-page Twitter clone. Users can post tweet messages be
 
 ## Final Product
 
+!["DESKTOP VIEW: displays user profile on left and tweet feed on right."](https://github.com/ematsushita/tweeter/blob/master/public/images/home-page.png?raw=true)
+!["MOBILE VIEW: on a mobile device, the header and navigation are combined to save space."](https://github.com/ematsushita/tweeter/blob/master/public/images/mobile-view.png?raw=true)
+!["TABLET VIEW: on a tabelet, the navigation bar is preserved, but the header and tweet feed appear in one column."](https://github.com/ematsushita/tweeter/blob/master/public/images/tablet-view.png?raw=true)
+
 ## Getting Started
 
 1. Clone this repository.
