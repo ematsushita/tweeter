@@ -8,62 +8,62 @@ $(document).ready(function() {
     if (daysAgo === 0) {
       return "posted today";
     } else if (daysAgo === 1) {
-      return "posted yesterday"
+      return "posted yesterday";
     } else {
       return `posted ${daysAgo} days ago`;
     }
   };
   
   //Generate new tweets by building HTML using variables for security
-  const createTweetElement = function ({user: {avatars, handle, name}, content, created_at}) {
+  const createTweetElement = function({user: {avatars, handle, name}, content, created_at}) {
     
     const $avatar = $("<img>")
-    .attr("src", avatars)
+      .attr("src", avatars);
     
     const $name = $("<div>")
-    .text(name)
-    .addClass("name")
-    .append($avatar);
+      .text(name)
+      .addClass("name")
+      .append($avatar);
 
     const $username = $("<div>")
-    .text(handle)
-    .addClass("username hidden");
+      .text(handle)
+      .addClass("username hidden");
 
     const $userFlex = $("<div>")
-    .addClass("flex")
-    .append($name, $username);
+      .addClass("flex")
+      .append($name, $username);
 
     const $tweet = $("<p>")
-    .text(content.text)
-    .addClass("tweet-text");
+      .text(content.text)
+      .addClass("tweet-text");
 
     const $timeStamp = $("<div>")
-    .text(standardTime(created_at))
-    .addClass("time-stamp");
+      .text(standardTime(created_at))
+      .addClass("time-stamp");
 
     const $socialHeart = $("<i>")
-    .addClass("fas fa-heart");
+      .addClass("fas fa-heart");
 
     const $socialFlag = $("<i>")
-    .addClass("fas fa-flag");
+      .addClass("fas fa-flag");
 
     const $socialTweet = $("<i>")
-    .addClass("fas fa-retweet");
+      .addClass("fas fa-retweet");
 
     const $socialIcons = $("<div>")
-    .addClass("social-icons")
-    .append($socialHeart, $socialFlag, $socialTweet);
+      .addClass("social-icons")
+      .append($socialHeart, $socialFlag, $socialTweet);
 
     const $header = $("<header>")
-    .append($userFlex);
+      .append($userFlex);
 
     const $footer = $("<footer>")
-    .addClass("flex")
-    .append($timeStamp, $socialIcons);
+      .addClass("flex")
+      .append($timeStamp, $socialIcons);
 
     const $article = $("<article>")
-    .addClass("tweet")
-    .append($header, $tweet, $footer);
+      .addClass("tweet")
+      .append($header, $tweet, $footer);
 
     return $article;
   };
@@ -74,13 +74,13 @@ $(document).ready(function() {
       const $newTweet = createTweetElement(tweet);
       $("#tweets-container").prepend($newTweet);
     }
-  }
+  };
 
   const loadTweets = function() {
     $("#tweets-container").empty();
     $.get("/tweets", (data) => {
       renderTweets(data);
-    })
+    });
   };
 
   loadTweets();
@@ -97,7 +97,7 @@ $(document).ready(function() {
     } else {
       $("#error-messages").slideUp(300, function() {
         $("textarea").focus();
-      })
+      });
     }
 
     //Send a post request to add new tweet
@@ -105,7 +105,7 @@ $(document).ready(function() {
       $("#tweets-container").prepend(loadTweets());
       $("#compose-tweet")[0].reset();
       $(".counter").text(140);
-    })
+    });
   });
 
   //When the #arrow-down is clicked, the "compose tweet" form should slide down and focus
@@ -115,7 +115,7 @@ $(document).ready(function() {
     });
   });
 
-  //The #arrow-up is clicked, the page should scroll to the top and the "compose tweet" form 
+  //The #arrow-up is clicked, the page should scroll to the top and the "compose tweet" form
   //should slide down and focus
   $("#arrow-up").click(function() {
     window.scrollTo({
@@ -130,8 +130,8 @@ $(document).ready(function() {
   
   //When the user scrolls past the header, the #write-a-tweet message and #arrow-down should be hidden
   //and the #arrow-up should appear at the bottome right corner and vice versa
-  $(window).scroll(function(){
-    if($(document).scrollTop() > 520){
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 520) {
       $("#write-a-tweet").css({"display": "none"});
       $("#arrow-down").css({"display": "none"});
       $("#arrow-up").css({"display": "block"});

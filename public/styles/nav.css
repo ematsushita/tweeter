@@ -56,6 +56,7 @@ nav #arrow-down {
   animation: bounce 1s infinite alternate;
 }
 
+/* bounce animation for up & down arrows */
 @keyframes bounce {
   from {
     transform:translateY(0px);
@@ -63,7 +64,6 @@ nav #arrow-down {
     transform:translateY(-10px);
   }
 }
-
 
 /************ MOBILE VIEW ***************/
 @media only screen and (max-width: 600px) {

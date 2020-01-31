@@ -7,6 +7,6 @@ $(document).ready(function() {
     } else if (charCount < 0) {
       $("form").find(".counter").css("color", "red");
     }
-  })
+  });
 });
 
