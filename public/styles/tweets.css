@@ -1,7 +1,8 @@
 article.tweet {
   margin-top: 3em;
   padding: 1em;
-  border: 2px solid #545149;
+  border: 5px solid #545149;
+  background-color: white;
 }
 
 header .name {
@@ -61,7 +62,8 @@ footer .time-stamp {
   margin: 0;
 }
 
-@media only screen and (max-width: 414px) {
+/************ MOBILE VIEW ***************/
+@media only screen and (max-width: 600px) {
   article.tweet {
     margin-top: 2em;
     padding: 0.7em;

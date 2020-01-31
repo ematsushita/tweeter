@@ -20,6 +20,7 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  background-image: url("../images/light-grey-terrazzo.png");
 }
 
 main.container {
@@ -27,9 +28,10 @@ main.container {
   margin-left: 5%;
   margin-right: 5%;
   text-align: center;
-  background-color: #f4f1ec;
 }
 
+
+/************ DESKTOP VIEW ***************/
 @media only screen and (min-width: 1024px) {
   main.container {
     float: right;
@@ -37,7 +39,8 @@ main.container {
   }
 }
 
-@media only screen and (max-width: 450px) {
+/************ MOBILE VIEW ***************/
+@media only screen and (max-width: 600px) {
   body {
     padding: 0;
   }

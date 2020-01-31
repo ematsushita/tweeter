@@ -8,16 +8,18 @@ header .your-name {
 header.main-header {
   height: 400px;
   width: 100%;
-  background-color: #d3d3d3;
+  background-color: lavender;
   background-image: url("https://www.transparenttextures.com/patterns/transparent-square-tiles.png");
   text-align: center;
 }
 
+/************ DESKTOP VIEW ***************/
 @media only screen and (min-width: 1024px) {
   header.main-header {
     float: left;
     width: 30%;
-    margin-top: 4rem;
+    border: 5px dotted #545149;
+    margin-top: 4.5rem;
     margin-left: 5rem;
   }
 }
