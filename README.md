@@ -5,8 +5,8 @@ Tweeter is a simple, single-page Twitter clone. Users can post tweet messages be
 ## Final Product
 
 
-!["DESKTOP VIEW"](https://github.com/ematsushita/tweeter/blob/master/public/images/mobile-view.png?raw=true)
-!["DESKTOP VIEW2"](https://github.com/ematsushita/tweeter/blob/master/public/images/home-page.png?raw=true)
+!["DESKTOP VIEW"](https://github.com/ematsushita/tweeter/blob/master/public/images/home-page1.png?raw=true)
+!["DESKTOP VIEW2"](https://github.com/ematsushita/tweeter/blob/master/public/images/home-page2.png?raw=true)
 !["MOBILE & TABLET VIEW"](https://github.com/ematsushita/tweeter/blob/master/public/images/mobile-tablet-view.png?raw=true)
 
 
